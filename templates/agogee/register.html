@@ -9,11 +9,11 @@
 
 		{% if registered %}
 		<strong>thank you for registering!</strong>
-		<a href="/apogee/">Home</a><br />
+		<a href="/agogee/">Home</a><br />
 		{% else %}
 		<strong>register here!</strong><br />
 
-		<form id="user_form" method="post" action="/rango/register/" enctype="multipart/form-data">
+		<form id="user_form" method="post" action="/agogee/register/" enctype="multipart/form-data">
 
 			{% csrf_token %}
 
