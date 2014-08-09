@@ -7,6 +7,10 @@ from django.contrib.auth.models import User
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from agogee.models import UserProfile
+
+import jawbone_integration
+import requests
+
 # Create your views here.
 
 def index(request):
@@ -105,4 +109,20 @@ def profile(request):
 
 	context_dict['user'] = user_form
 	context_dict['userprofile'] = up
+
+    ### integration with jawbone ###
+
+    #hardcode the authorization string
+	header = {
+        'Authorization': 'Bearer b6_3pfGGwEjLGQwKcc35Ru0-Al13wvvmkdMJNNjUQ0eHD4Ce7f5WhAmKfv_1EyUa8EvaJSumcI0GoYT-V9UbpVECdgRlo_GULMgGZS0EumxrKbZFiOmnmAPChBPDZ5JP'
+ 	}
+ 	workout_url = 'https://jawbone.com/nudge/api/users/@me/moves'
+	jawbone_data = requests.get(workout_url, headers = header)
+
+	context_dict['active_minutes'] = jawbone_integration.get_active_minutes(jawbone_data)
+	context_dict['calories_burned'] = jawbone_integration.get_calories_burned(jawbone_data)
+
+	print "*active minutes", context_dict['active_minutes']
+	print "*calories burned", context_dict['calories_burned']
+
 	return render_to_response('agogee/profile.html', context_dict, context)
