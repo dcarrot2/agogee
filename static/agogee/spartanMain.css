@@ -20,7 +20,7 @@ body {
   margin-left:215px;
 }
 .row a{
-  width: 120.7px;
+  width: 141.5px;
   margin-left:1px;
 }
 .active a{
@@ -28,12 +28,21 @@ body {
 }
 .menu a:hover {
   background:#C00000 !important;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
 }
 .menu a{
   background-color: black;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
 }
 .nav li{
   background-color: black;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
 }
 .img src{
 
@@ -59,6 +68,7 @@ body {
 .sideInfo {
   margin-top: 25px;
   margin-right: 300px;
+
 }
 
 

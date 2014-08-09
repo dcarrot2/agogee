@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+	<head>
+		<title>Agogee Login</title>
+	</head>
 
+	<body>
+		<h1>Login to Agogee</h1>
+
+		<form id="login form" method="post" action="/agogee/login/">
+			{% csrf_token %}
+			Username: <input type="text" name="username" value="" size="50"><br/>
+			Password: <input type="password" name="password" value="" size="50" /><br/>
+
+			<input type="submit" value="submit" />
+		</form>
+	</body>
+</html>
+=======
     <link rel="stylesheet" href="/static/agogee/register.css">
-
         <head>
             <title>Agogee Login</title>
         </head>
