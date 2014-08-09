@@ -4,7 +4,7 @@
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/agogee/events.css">
+    <link rel="stylesheet" href="/static/agogee/about.css">
   </head>
   <body>
    <div class="image">
@@ -16,21 +16,22 @@
 <div class="row">
 <div class="span8">
 <ul class="nav nav-pills">
-   <li><a href="spartanMain.html"><font color="#FFFFFF">Home</font></a><li>
-   <li><a href="profile.html"><font color="#FFFFFF">Profile</font></a></li>
+   <li><a href="{% url 'agogee:spartanMain' %}"><font color="#FFFFFF">Home</font></a></li>
+   <li><a href="{% url 'agogee:profile' %}"><font color="#FFFFFF">Profile</font></a><li>
+   <li><a href="events.html"><font color="#FFFFFF">Events</font></a></li>
    <li><a href="community.html"><font color="#FFFFFF">Community</font></a></li>
-   <li><a href="abouts.html"><font color="#FFFFFF">About</font></a></li>
 </div>
 </div>
 </div>
 </ul>
-  <div class="commentBox">
-  <form action="/html/tags/html_form_tag_action.cfm" method="post">
-Comments:<br/>
-<textarea name="comments" id="comments">
-Enter a comment 
-</textarea><br/>
-<input type="submit" value="Submit" />
-</form>
+
+<aside class="aboutBG">
+     <article>
+        <h3>What is Agogee?</h3>
+           <p> Hello, World!</p>
+      </article>
+    </aside>
+
+  <body>
   </body>
   </html>
