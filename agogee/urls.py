@@ -4,6 +4,7 @@ from agogee import views
 
 urlpatterns = patterns("",
 	url(r'^$', TemplateView.as_view(template_name='agogee/spartanMain.html'), name='index'),
+	url(r'^events', TemplateView.as_view(template_name='agogee/events.html'), name='events'),
 	url(r'^community', TemplateView.as_view(template_name='agogee/community.html'), name='community'),
 	url(r'^profile', TemplateView.as_view(template_name='agogee/profile.html'), name='profile'),
 	url(r'^register/$', views.register, name='register'),
