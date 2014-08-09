@@ -3,19 +3,41 @@ from agogee.forms import UserForm
 from agogee.forms import UserProfileForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.template import RequestContext
+from django.http import HttpResponseRedirect
+from agogee.models import UserProfile
+
+import jawbone_integration
+import requests
+
 # Create your views here.
+
+def index(request):
+	UserProfile.objects.all()
+	top_spartans = UserProfile.objects.order_by('-ranking')[:5]
+	for spartan in top_spartans:
+		print spartan
+	context = {'top_spartans': top_spartans}
+	return render(request, 'agogee/spartanMain.html', context)
 
 def register(request):
 	if request.session.test_cookie_worked():
 		print ">>>> TEST COOKIE WORKED!"
 		request.session.delete_test_cookie()
+
+	else:
+		print "Failed test cookie"
 	context = RequestContext(request)
 
 	registered = False
 
+	print "test"
+
 	if request.method == 'POST':
+		print request.POST
 		user_form = UserForm(data = request.POST)
+		profile_form = UserProfileForm(data=request.POST)
 
 		if user_form.is_valid() and profile_form.is_valid():
 			user = user_form.save()
@@ -23,7 +45,8 @@ def register(request):
 			user.save()
 
 			profile = profile_form.save(commit=False)
-			profile.user = user_form
+			profile.user = user
+			profile.ranking = 0
 
 			if 'picture' in request.FILES:
 				profile.picture = request.FILES['picture']
@@ -32,7 +55,7 @@ def register(request):
 
 			register = True
 
-			return index(request)
+			return HttpResponseRedirect('/agogee/thankyou')
 
 		else:
 			print user_form.errors, profile_form.errors
@@ -45,6 +68,9 @@ def register(request):
 		'agogee/register.html',
 		{'user_form': user_form, 'profile_form': profile_form, 'registered': registered},
 		context)
+
+
+
 
 def user_login(request):
 	context = RequestContext(request)
@@ -88,4 +114,20 @@ def profile(request):
 
 	context_dict['user'] = user_form
 	context_dict['userprofile'] = up
-	return render_to_response('rango/profile.html', context_dict, context)
+
+    ### integration with jawbone ###
+
+    #hardcode the authorization string
+	header = {
+        'Authorization': 'Bearer b6_3pfGGwEjLGQwKcc35Ru0-Al13wvvmkdMJNNjUQ0eHD4Ce7f5WhAmKfv_1EyUa8EvaJSumcI0GoYT-V9UbpVECdgRlo_GULMgGZS0EumxrKbZFiOmnmAPChBPDZ5JP'
+ 	}
+ 	workout_url = 'https://jawbone.com/nudge/api/users/@me/moves'
+	jawbone_data = requests.get(workout_url, headers = header)
+
+	context_dict['active_minutes'] = jawbone_integration.get_active_minutes(jawbone_data)
+	context_dict['calories_burned'] = jawbone_integration.get_calories_burned(jawbone_data)
+
+	print "*active minutes", context_dict['active_minutes']
+	print "*calories burned", context_dict['calories_burned']
+
+	return render_to_response('agogee/profile.html', context_dict, context)

@@ -32,6 +32,7 @@
 </div>
 </ul>
 
+<<<<<<< HEAD
 <div class= "userInfo">
   <form>
 	First name: <input type="text" name="firstname"><br>
@@ -58,5 +59,26 @@ function textCounter(field,field2,maxlimit)
 }
 </script>
 </div>
+=======
+<div class="hero-unit">
+       <h1> Profile <h1> <br/>
+     <h2>{{ user.username }}</h2>
+       <p>Email: {{ user.email }}</p>
+       
+      {% if userprofile %}
+     <p>Website: <a href="{{ userprofile.website }}">{{userprofile.website}}</a></p>
+           <br/>
+        {% if userprofile.picture %}
+     <img src="{{ userprofile.picture.url }}"  />
+        {% endif %}
+      {% endif %}
+     <h2>Stats</h2>
+     <p>Total active minutes: {{ active_minutes }}</p>
+     <p>Total calories burned: {{ calories_burned }}</p>
+
+
+</div>
+
+>>>>>>> de983b4e21d66d156a4a5addb39be91c6eac7431
   </body>
   </html>
