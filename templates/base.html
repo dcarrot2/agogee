@@ -31,30 +31,7 @@
 
    <li><a href="{% url 'agogee:about' %}"><font color="#FFFFFF">About</font></a></li>
     </div>
-    <div class="image">
-
-    <aside class="sideInfo">
-     <article>
-        <h3>Agogee Spartan Generals</h3>
-        <h5>TOP 5</h5>
-
-        {% if top_spartans %}
-
-          {% for spartan in top_spartans %}
-     
-            <td>{{ forloop.counter }}. {{ spartan }}</td>
-            <td>{{ spartan.ranking }}</td> <br>
-      
-          {% endfor %}
-
-        {% else %}
-           <p>No spartans!</p>
-        {% endif %}
-      </article>
-    </aside>
-   	 <li><img src="http://lecahier.com/wp-content/themes/slide/themify/img.php?src=http://lecahier.com/wp-content/uploads/2014/05/Capture-d%E2%80%99%C3%A9cran-2014-05-23-%C3%A0-09.51.30.png&w=420&h=241&zc=1"  style="margin-top:25px"></img></li>
-
-  </div>
+   
 
 </div>
 
