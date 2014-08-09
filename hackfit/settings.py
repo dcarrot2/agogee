@@ -40,8 +40,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'agogee',
+    'django.contrib.comments', #For comments
+    'django.contrib.sites', #For comments
  #   'django_leaderboard',
 )
+
+SITE_ID = 1 #For comments (I think)
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

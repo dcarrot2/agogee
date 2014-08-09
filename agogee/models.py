@@ -12,3 +12,13 @@ class UserProfile(models.Model):
 
 	def __unicode__(self):
 		return self.user.username
+
+
+
+class DiscussionTopic(models.Model):
+
+	picture = models.ImageField(upload_to='discussion_images', blank=True)
+	topic_name = models.CharField(max_length=150)
+
+	def __unicode__(self):
+		return self.user.topic_name
