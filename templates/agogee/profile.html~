@@ -32,34 +32,6 @@
 </div>
 </ul>
 
-<<<<<<< HEAD
-<div class= "userInfo">
-  <form>
-	First name: <input type="text" name="firstname"><br>
-	Last name: <input type="text" name="lastname">
-  </form>
-  <form>
-	<input type="radio" name="sex" value="male">Male<br>
-	<input type="radio" name="sex" value="female">Female
-  </form>
-<input disabled  maxlength="3" size="3" value="280" id="counter">
-<textarea onkeyup="textCounter(this,'counter',280);" id="message">
-Bio.. 
-</textarea><br/>
-<script>
-function textCounter(field,field2,maxlimit)
-{
- var countfield = document.getElementById(field2);
- if ( field.value.length > maxlimit ) {
-  field.value = field.value.substring( 0, maxlimit );
-  return false;
- } else {
-  countfield.value = maxlimit - field.value.length;
- }
-}
-</script>
-</div>
-=======
 <div class="hero-unit">
        <h1> Profile <h1> <br/>
      <h2>{{ user.username }}</h2>
@@ -79,6 +51,5 @@ function textCounter(field,field2,maxlimit)
 
 </div>
 
->>>>>>> de983b4e21d66d156a4a5addb39be91c6eac7431
   </body>
   </html>
