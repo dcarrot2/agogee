@@ -25,11 +25,8 @@
 </div>
 </ul>
 
-<<<<<<< HEAD
-=======
 {% load comments %}
 
   <body>
->>>>>>> de983b4e21d66d156a4a5addb39be91c6eac7431
   </body>
   </html>

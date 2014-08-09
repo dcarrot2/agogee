@@ -17,10 +17,10 @@ body {
 }
 
 .row li{
-  margin-left:215px;
+  margin-left:215.5px;
 }
 .row a{
-  width: 141.5px;
+  width: 213px;
   margin-left:1px;
 }
 .active a{
@@ -35,15 +35,8 @@ body {
 .nav li{
   background-color: black;
 }
-.img src{
 
-  margin-top: 45px;
-  margin-left:215px;
-  height: 100px;
-  width: 200px;
-}
-
-.sideInfo{
+.aboutBG{
   float: right;
   width: 25%;
   margin: 1% 0% 1% 0%;
@@ -55,27 +48,13 @@ body {
   color: white;
   text-align: center;
 }
-
-.sideInfo {
-  margin-top: 25px;
-  margin-right: 300px;
-
+.aboutBG {
+  margin-top: 20px;
+  margin-right: 224px;
+  width:860px;
+  height:1000px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.aboutBG h3{
+  font-size: 60px;
+  text-align: center;
+}
