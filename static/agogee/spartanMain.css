@@ -20,7 +20,7 @@ body {
   margin-left:215px;
 }
 .row a{
-  width: 213px;
+  width: 120.7px;
   margin-left:1px;
 }
 .active a{
@@ -36,6 +36,7 @@ body {
   background-color: black;
 }
 .img src{
+
   margin-top: 45px;
   margin-left:215px;
   height: 100px;
@@ -43,14 +44,21 @@ body {
 }
 
 .sideInfo{
-  width: 25%;
   float: right;
+  width: 25%;
   margin: 1% 0% 1% 0%;
   border-radius: 7px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
-  background-color: #f8f8f8;
+  background-color: #CC0000;
   padding-bottom: 25px;
+  color: white;
+  text-align: center;
+}
+
+.sideInfo {
+  margin-top: 25px;
+  margin-right: 300px;
 }
 
 

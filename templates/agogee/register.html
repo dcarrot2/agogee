@@ -3,7 +3,13 @@
 	<link rel="stylesheet" href="/static/agogee/register.css">
 	<div class="container">
 
-    <form id="signup">
+	{% if registered %}
+		<strong>Thank you for registering!</strong>
+		<a href="/agogee/">Home</a><br />
+		{% else %}
+	
+
+    <form id="signup" method="post" action="/agogee/register/" enctype="multipart/form-data">
 
         <div class="header">
         
@@ -12,13 +18,9 @@
             <p>Fill out this form</p>
             
         </div>
-		
-		{% if registered %}
-		<strong>Thank you for registering!</strong>
-		<a href="/agogee/">Home</a><br />
-		{% else %}
 
 		<form id = "user_form" method = "post" action = "/agogee/register/" enctype = "multipart/form-data">
+
 
 			{% csrf_token %}
 

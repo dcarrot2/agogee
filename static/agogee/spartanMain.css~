@@ -9,7 +9,7 @@
 body {
   background-image:url('http://wildclimbbg.com/wp-content/uploads/2013/03/background-color.png');
   position: center;
-  width: 864;
+  width: 864px;
 }
 
 .menu li {
@@ -20,7 +20,7 @@ body {
   margin-left:215px;
 }
 .row a{
-  width: 213px;
+  width: 120.7px;
   margin-left:1px;
 }
 .active a{
@@ -35,5 +35,46 @@ body {
 .nav li{
   background-color: black;
 }
+.img src{
+
+  margin-top: 45px;
+  margin-left:215px;
+  height: 100px;
+  width: 200px;
+}
+
+.sideInfo{
+  float: right;
+  width: 25%;
+  margin: 1% 0% 1% 0%;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  background-color: #CC0000;
+  padding-bottom: 25px;
+  color: white;
+  text-align: center;
+}
+
+.sideInfo {
+  margin-top: 25px;
+  margin-right: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -8,7 +8,10 @@ urlpatterns = patterns("",
 	url(r'^events', TemplateView.as_view(template_name='agogee/events.html'), name='events'),
 	url(r'^community', TemplateView.as_view(template_name='agogee/community.html'), name='community'),
 	url(r'^profile', TemplateView.as_view(template_name='agogee/profile.html'), name='profile'),
-	url(r'^register/$', views.register, name='register'),
+	url(r'^register', views.register, name='register'),
 	url(r'^login/$', views.user_login, name='login'),
 	url(r'^logout/$', views.user_logout, name='logout'),
-	url(r'^profile/$', views.profile, name='profile'))
+	url(r'^profile/$', views.profile, name='profile'),
+	url(r'^thankyou/$', TemplateView.as_view(template_name='agogee/thankyou.html'), name='thankyou'),
+	url(r'^about/$', TemplateView.as_view(template_name='agogee/about.html'), name='about'),
+)
