@@ -19,7 +19,7 @@
 <div class="row">
 <div class="span8">
 <ul class="nav nav-pills">
-   <li><a href="profile.html"><font color="#FFFFFF">Profile</font></a><li>
+   <li><a href="{% url 'profile' %}"><font color="#FFFFFF">Profile</font></a><li>
    <li><a href="events.css"><font color="#FFFFFF">Events</font></a></li>
    <li><a href="community.css"><font color="#FFFFFF">Community</font></a></li>
    <li><a href="#"><font color="#FFFFFF">About</font></a></li>
@@ -30,6 +30,26 @@
 </div>
 </div>
 </ul>
+
+<aside class="sideInfo">
+  <article>
+    <h3>Agogee Spartan General!</h3>
+
+    {% if top_spartans %}
+
+      {% for spartan in top_spartans %}
+     
+        <td>{{ spartan }}</td>
+        <td>{{ spartan.ranking }}</td> <br>
+      
+      {% endfor %}
+
+    {% else %}
+      <p>No spartans!</p>
+    {% endif %}
+
+  </article>
+</aside>
 
 
   </body>
