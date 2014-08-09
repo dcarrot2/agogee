@@ -76,3 +76,16 @@ def user_logout(request):
 	logout(request)
 
 	return HttpResponseRedirect('/agogee/')
+
+def profile(request):
+	context = RequestContext(request)
+	u = User.objects.get(username=request.user)
+
+	try:
+		up = UserProfile.objects.get(user=u)
+	except:
+		up = None
+
+	context_dict['user'] = user_form
+	context_dict['userprofile'] = up
+	return render_to_response('rango/profile.html', context_dict, context)
