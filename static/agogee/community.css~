@@ -8,6 +8,8 @@
 }
 body {
   background-image:url('http://wildclimbbg.com/wp-content/uploads/2013/03/background-color.png');
+  position: center;
+  width: 864;
 }
 
 .menu li {
@@ -33,25 +35,5 @@ body {
 .nav li{
   background-color: black;
 }
-
-.image img{
-  margin-top: 45px;
-  margin-left:215px;
-}
-
-.userInfo form{
-  margin-top: 25px;
-  margin-left: 200px;
-  color: #000000;
-}
-.userInfo div{
-  margin-left: 200px;
-  color: #000000;
-}
-.userInfo textarea{
-  width:400px;
-  height:130px;
-}
-
 
 

@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/agogee/spartanMain.css">
+    <link rel="stylesheet" href="/static/agogee/community.css">
   </head>
-
   <body>
-  <div class="image">
+   <div class="image">
   <div class ="jumbotron">
   <div class= "container">
   </div>
   </div>
-
 <div class="menu">
 <div class="row">
 <div class="span8">
 <ul class="nav nav-pills">
-   <li><a href="profile.html"><font color="#FFFFFF">Profile</font></a><li>
+   <li><a href="spartanMain.html"><font color="#FFFFFF">Home</font></a><li>
+   <li><a href="profile.html"><font color="#FFFFFF">Profile</font></a></li>
    <li><a href="events.html"><font color="#FFFFFF">Events</font></a></li>
-   <li><a href="community.html"><font color="#FFFFFF">Community</font></a></li>
    <li><a href="#"><font color="#FFFFFF">About</font></a></li>
-    </div>
-    <div class="image">
-   	 <img src="http://lecahier.com/wp-content/themes/slide/themify/img.php?src=http://lecahier.com/wp-content/uploads/2014/05/Capture-d%E2%80%99%C3%A9cran-2014-05-23-%C3%A0-09.51.30.png&w=420&h=241&zc=1" margin-left="400px" style="margin-top:25px"></img>
-  </div>
-</div>
 </div>
 </div>
 </div>
 </ul>
-
 
   </body>
   </html>

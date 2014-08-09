@@ -1,9 +1,9 @@
 .jumbotron {
-  background-image: url('http://www.skicanada.org/wp-content/uploads/2014/07/Spartan-race.jpg');
+  background-image: url('http://crossfitoneworld.typepad.com/.a/6a00d8341bf90553ef019b000ef29d970b-800wi');
   position: center;
   margin-left: 200px;
   margin-top: 20px;
-  width:864px;
+  width:800px;
   height:288px; 
 }
 body {
@@ -33,25 +33,12 @@ body {
 .nav li{
   background-color: black;
 }
-
-.image img{
-  margin-top: 45px;
-  margin-left:215px;
-}
-
-.userInfo form{
-  margin-top: 25px;
-  margin-left: 200px;
-  color: #000000;
-}
-.userInfo div{
-  margin-left: 200px;
-  color: #000000;
-}
-.userInfo textarea{
+.commentBox textarea{
   width:400px;
   height:130px;
 }
 
-
-
+.commentBox form{
+  margin-left: 200px;
+  color: #000000;
+}
