@@ -5,7 +5,12 @@
 
 
 
+{% if is_paginated %}
+<ol start="{{ page_obj.start_index }}">
+{% else %}
 <ol>
+{% endif %}
+
 {% for post in object_list %}
     <li>
     <a href="{{ post.url }}">
@@ -15,5 +20,13 @@
 {% endfor %}
 </ol>
 
+
+{% if is_paginated %}
+<div class="pagination">
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">More &raquo;</a>
+    {% endif %}
+</div>
+{% endif %}
 
 {% endblock %}
