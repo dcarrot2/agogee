@@ -42,7 +42,7 @@ def register(request):
 		profile_form = UserProfileForm
 
 	return render_to_response(
-		'apogee/register.html',
+		'agogee/register.html',
 		{'user_form': user_form, 'profile_form': profile_form, 'registered': registered},
 		context)
 
@@ -59,20 +59,20 @@ def user_login(request):
 
 			if user.is_active:
 				login(request, user)
-				return HttpResponseRedirect('/rango/')
+				return HttpResponseRedirect('/agogee/')
 
 			else:
-				return HttpResponse("Your Rango account is disabled.")
+				return HttpResponse("Your agogee account is disabled.")
 
 		else:
 			print "Invalid login details: {0}, {1}".format(username, password)
 			return HttpResponse("Invalid login details supplied.")
 
 	else:
-		return render_to_response('rango/login.html', {}, context)
+		return render_to_response('agogee/login.html', {}, context)
 
 @login_required
 def user_logout(request):
 	logout(request)
 
-	return HttpResponseRedirect('/apogee/')
+	return HttpResponseRedirect('/agogee/')
