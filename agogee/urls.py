@@ -13,4 +13,5 @@ urlpatterns = patterns("",
 	url(r'^logout/$', views.user_logout, name='logout'),
 	url(r'^profile/$', views.profile, name='profile'),
 	url(r'^thankyou/$', TemplateView.as_view(template_name='agogee/thankyou.html'), name='thankyou'),
+	url(r'^about/$', TemplateView.as_view(template_name='agogee/about.html'), name='about'),
 )
