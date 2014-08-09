@@ -1,0 +1,86 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {% trans 'Agogee Adminstration' %}{% endblock %}
+
+{% block extrastyle %}
+
+<!-- <link rel="stylesheet" href="headerfooter.css" type="text/css"/> -->
+
+
+<style>
+
+
+#header{ width:100%;
+background-color: 
+#CC0000;
+color: #fff;
+border-bottom: solid 3px #999;
+display: block;
+ }
+
+
+
+#branding h1{ color: #fff; }
+.module h2, .module caption, .inline-group h2 { background:#ccc url(/img/admin/nav-bg.gif) bottom left repeat-x; color: #333940; }
+a.section:link, a.section:visited { color: #CC0000; }
+
+#content p
+{
+color: #red;
+}
+	
+#footer { 
+position:fixed; 
+bottom:-1px;
+width: 100%; 
+left: 1px;
+height:5px; 
+background-color: #DF4F44; 
+border-bottom: solid 3px #999;
+}
+
+#footer p {
+position: relative;
+top: -6px;
+width: 100%;
+text-align: center;
+margin-left: auto;
+height: 25px;
+color: #fff;
+}
+
+</style>
+
+<!-- <footer class="footer">
+
+	<div class="copyright">
+		Copyright &copy; 2014 Microsuave. All rights reserved
+	</div>
+</footer> -->
+
+{% endblock %}
+{% block branding %}
+<h1 id="site-name">{% trans 'Agogee Database' %}</h1>
+
+{% endblock %}
+
+
+
+{% block nav-global %}
+
+{% endblock %}
+
+
+{% block content %}
+<div id = "content" class"colMS">
+	<p> LOLOLOLOL </p>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+
+
