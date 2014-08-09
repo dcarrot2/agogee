@@ -1,0 +1,40 @@
+.jumbotron {
+  background-image: url('http://www.skicanada.org/wp-content/uploads/2014/07/Spartan-race.jpg');
+  position: center;
+  margin-left: 200px;
+  margin-top: 20px;
+  width:864px;
+  height:288px; 
+}
+body {
+  background-image:url('http://wildclimbbg.com/wp-content/uploads/2013/03/background-color.png');
+  position: center;
+  width: 864;
+}
+
+.menu li {
+ display: inline;
+}
+
+.row li{
+  margin-left:215px;
+}
+.row a{
+  width: 213px;
+  margin-left:1px;
+}
+.active a{
+  position: center;
+}
+.menu a:hover {
+  background:#C00000 !important;
+}
+.menu a{
+  background-color: black;
+}
+.nav li{
+  background-color: black;
+}
+
+
+
