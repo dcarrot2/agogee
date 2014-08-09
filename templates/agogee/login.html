@@ -6,7 +6,7 @@
         </head>
         <div class="container">
             
-            <form id="signup">
+            <form id="signup" method="post" action="/agogee/login/">
                 
                 <div class="header">
                     
@@ -16,7 +16,7 @@
                     
                 </div>
                 
-                <form id="login form" method="post" action="/agogee/login/">
+            
                     {% csrf_token %}
                     Username: <input type="text" name="username" value="" size="50"><br/>
                         Password: <input type="password" name="password" value="" size="50" /><br/>
