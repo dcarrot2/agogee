@@ -28,6 +28,8 @@ def register(request):
 
 	registered = False
 
+	print "test"
+
 	if request.method == 'POST':
 		print request.POST
 		user_form = UserForm(data = request.POST)
