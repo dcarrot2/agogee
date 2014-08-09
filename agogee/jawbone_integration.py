@@ -88,7 +88,7 @@ def get_calories_burned(user):
     #print('Total calories burned ' + str(int(temp_cal)))
     #print
 
-    return temp_cal
+    return int(temp_cal)
     
 def bubble_sort(listOfUsers,rankUsers):
     # Sort the sequence from greatest to least
