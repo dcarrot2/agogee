@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response
 from agogee.forms import UserForm
 from agogee.forms import UserProfileForm
-from django.contrib.auth import autheticate, login, logout
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 # Create your views here.

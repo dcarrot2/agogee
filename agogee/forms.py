@@ -1,14 +1,15 @@
 from django import forms
 from agogee.models import UserProfile
+from django.contrib.auth.models import User
 
 class UserForm(forms.ModelForm):
-	password = forms.CharField(widget=forms.PassWordInput())
+	password = forms.CharField(widget=forms.PasswordInput())
 
 	class Meta:
-		model = UserForm
+		model = User
 		fields = ('username', 'email', 'password')
 
 class UserProfileForm(forms.ModelForm):
 	class Meta:
 		model = UserProfile
-		fields = ('website', 'picture')
+		fields = ('email', 'picture', 'about_me','ranking')
