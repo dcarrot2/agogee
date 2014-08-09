@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Rango</title>
-	</head>
+	<link rel="stylesheet" href="/static/agogee/register.css">
+	<div class="container">
 
-	<body>
-		<h1>Register for Agogee!</h1>
+    <form id="signup">
 
+        <div class="header">
+        
+            <h3>Register for Agogee!</h3>
+            
+            <p>Fill out this form</p>
+            
+        </div>
+		
 		{% if registered %}
-		<strong>thank you for registering!</strong>
+		<strong>Thank you for registering!</strong>
 		<a href="/agogee/">Home</a><br />
 		{% else %}
-		<strong>register here!</strong><br />
+		<strong>Register here!</strong><br />
 
-		<form id="user_form" method="post" action="/agogee/register/" enctype="multipart/form-data">
+		<form id = "user_form" method = "post" action = "/agogee/register/" enctype = "multipart/form-data">
 
 			{% csrf_token %}
 
 			{{ user_form.as_p }}
 			{{ profile_form.as_p }}
 
-			<input type="submit" name="submit" value="Register" />
+			<input type = "submit" name = "submit" value = "Register" />
 
 		</form>
-
+		
 		{% endif %}
-	</body>
+
+	</div>
+
 </html>
