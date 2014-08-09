@@ -23,9 +23,7 @@
    <li><a href="community.html"><font color="#FFFFFF">Community</font></a></li>
    <li><a href="about.html"><font color="#FFFFFF">About</font></a></li>
    </div>
-    <div class="image">
-   	 <img src= "http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=152"></img>
-  </div>
+    
 </div>
 </div>
 </div>
@@ -33,17 +31,11 @@
 </ul>
 
 <div class="hero-unit">
+     <img src="{{ userprofile.picture.url }}" style="height:45%;width:45%;float:left;margin:5px;padding:5px;"></img>
+
        <h1> Profile <h1> <br/>
      <h2>{{ user.username }}</h2>
-       <p>Email: {{ user.email }}</p>
-       
-      {% if userprofile %}
-     <p>Website: <a href="{{ userprofile.website }}">{{userprofile.website}}</a></p>
-           <br/>
-        {% if userprofile.picture %}
-     <img src="{{ userprofile.picture.url }}"  />
-        {% endif %}
-      {% endif %}
+       <p>About me: {{ userprofile.ranking }} </p>
      <h2>Stats</h2>
      <p>Total active minutes: {{ active_minutes }}</p>
      <p>Total calories burned: {{ calories_burned }}</p>
