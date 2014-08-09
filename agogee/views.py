@@ -103,17 +103,21 @@ def user_logout(request):
 
 	return HttpResponseRedirect('/agogee/')
 
+@login_required
 def profile(request):
+	
 	context = RequestContext(request)
 	u = User.objects.get(username=request.user)
-
+	
 	try:
+		
 		up = UserProfile.objects.get(user=u)
 	except:
+		print "none"
 		up = None
 
-	context_dict['user'] = user_form
-	context_dict['userprofile'] = up
+	context_dict = {'user':u, 'userprofile':up}
+	
 
     ### integration with jawbone ###
 
