@@ -135,3 +135,6 @@ def profile(request):
 	print "*calories burned", context_dict['calories_burned']
 
 	return render_to_response('agogee/profile.html', context_dict, context)
+
+
+

@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'agogee',
     'django.contrib.comments', #For comments
     'django.contrib.sites', #For comments
+    'posts',
+    'hackfit',
  #   'django_leaderboard',
 )
 
