@@ -76,7 +76,7 @@ def get_active_minutes(user):
     #print('Total time: ' + str(temp_min / 60) + ' minutes')
     #print
 
-    return temp_min
+    return temp_min / 60
 
 def get_calories_burned(user):
     temp_cal = 0
