@@ -6,3 +6,7 @@
   width:864px;
   height:288px; 
 }
+.commentBox form{
+  position: top;
+  color: #000000;
+}
