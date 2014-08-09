@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'agogee',
-    'django_leaderboard',
+ #   'django_leaderboard',
 )
 
 MIDDLEWARE_CLASSES = (
