@@ -11,7 +11,7 @@ from agogee.models import UserProfile
 
 def index(request):
 	UserProfile.objects.all()
-	top_spartans = UserProfile.objects.order_by('-ranking')[:2]
+	top_spartans = UserProfile.objects.order_by('-ranking')[:5]
 	for spartan in top_spartans:
 		print spartan
 	context = {'top_spartans': top_spartans}
@@ -51,7 +51,7 @@ def register(request):
 
 			register = True
 
-			return HttpResponseRedirect('/agogee/')
+			return HttpResponseRedirect('/agogee/thankyou')
 
 		else:
 			print user_form.errors, profile_form.errors
@@ -64,6 +64,9 @@ def register(request):
 		'agogee/register.html',
 		{'user_form': user_form, 'profile_form': profile_form, 'registered': registered},
 		context)
+
+
+
 
 def user_login(request):
 	context = RequestContext(request)
